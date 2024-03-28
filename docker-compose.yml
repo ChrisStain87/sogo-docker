@@ -3,7 +3,7 @@ services:
   sogo:
     build: .
     ports:
-      - 80:80
+      - 8011:80
     environment:        
       - DB_HOST=db
       - DB_USER=sogo
@@ -13,14 +13,14 @@ services:
       - DB_FOLDERINFO=mysql://sogo:pass@db:3361/sogo/sogo_folder_info
       - DB_SESSIONSFOLDER=mysql://sogo:pass@db:3361/sogo/sogo_sessions_folder
       - DB_USERVIEW=mysql://sogo:pass@db:3361/sogo/sogo_view
-      - IMAP_SERVER=imaps://mail.somehost.xy:993
-      - SIEVE_SERVER=sieve://mail.somehost.xy:4190
-      - SMTP_SERVER=mail.somehost.xy
-      - MAILDOMAIN=mail.somehost.xy
-      - TITLE=My Amazing SOGo Instance
+      - IMAP_SERVER=imaps://mail.selinabinder.de:993
+      - SIEVE_SERVER=sieve://mail.selinabinder.de:4190
+      - SMTP_SERVER=mail.selinabinder.de
+      - MAILDOMAIN=selinabinder.de
+      - TITLE=Selinas Mail
       - LANGUAGE=English
       - TIMEZONE=Europe/Berlin
-      - SUPERUSERS=christopher.hauser@alb-tec.de
+      - SUPERUSERS=cs@stain.de
   db:
     image: mariadb
     restart: always
